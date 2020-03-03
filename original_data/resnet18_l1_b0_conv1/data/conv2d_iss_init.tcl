@@ -1,0 +1,1 @@
+iss fileinput_range add DM_Glob 0 -field -file /home/basti/data/hdd/test/cnn_asip/core/apps/benchmark_conv2d/runs/ssd_test/resnet18_l1_b0_conv1/data/conv2d.dat -position 0 -nbr_fields 396928 -type {} -radix hex -filter {} -format unsigned -structured 0 -auto_load 1 -bin_nbr_bytes 2 -bin_lsb_first 0 -load_on_breakpoint 0 -breakpoint_addr 0

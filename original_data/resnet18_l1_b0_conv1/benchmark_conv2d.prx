@@ -1,0 +1,19 @@
+<project name="Project" processor="tmicro" lib="/home/basti/data/hdd/test/cnn_asip/core/lib">
+    <file type="c" name="benchmark_conv2d.c" path=""/>
+    <file type="a" name="app_init_general.s" path="&lt;PROCDIR&gt;/../apps/utils"/>
+    <option id="bridge.cfg" value="linker_file.bcf"/>
+    <option id="cpp.include" value="&lt;PROCDIR&gt;/../core_libs &lt;PROCDIR&gt;/../lib/runtime/include" inherit="0" cfg="Debug"/>
+    <option id="cpp.include" value="&lt;PROCDIR&gt;/../core_libs" inherit="0" cfg="Debug_LLVM"/>
+    <option id="cpp.include" value="&lt;PROCDIR&gt;/../core_libs" inherit="0" cfg="Native"/>
+    <option id="cpp.include" value="&lt;PROCDIR&gt;/../core_libs &lt;PROCDIR&gt;/../lib/runtime/include" inherit="0" cfg="Release"/>
+    <option id="cpp.include" value="&lt;PROCDIR&gt;/../core_libs" inherit="0" cfg="Release_LLVM"/>
+    <option id="cpp.define" value="FNAME_DATA=\&quot;data/conv2d.dat\&quot;" inherit="1" cfg="Native"/>
+    <option id="simrun.siminit" value="data/conv2d_iss_init.tcl"/>
+    <option id="simrun.simscript" value="run_iss.tcl"/>
+    <option id="noodle.alwinc" value="data/conv2d_config.h" inherit="1"/>
+    <option id="project.dir" value="&lt;CONFIG&gt;"/>
+    <option id="project.name" value="benchmark_conv2d"/>
+    <option id="project.type" value="exe"/>
+    <option id="project.work" value="&lt;TARGETDIR&gt;/chesswork"/>
+    <option id="simrun.microstep" value="off"/>
+</project>

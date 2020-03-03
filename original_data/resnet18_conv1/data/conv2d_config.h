@@ -1,0 +1,77 @@
+
+// Fixed-Point config
+#define INTBITS_WGT      5
+#define FRACBITS_WGT     11
+#define GATEBITS_WGT     0
+#define INTBITS_INP      5
+#define FRACBITS_INP     11
+#define GATEBITS_INP     0
+#define INTBITS_ACCU     10
+#define FRACBITS_ACCU    22
+#define GATEBITS_ACCU    0
+#define INTMODE          INT16_MODE
+#define SUBW_PARALLELISM 1
+
+// Conv-layer config
+#define CONV_TYPE           conv
+#define FILTER_HEIGHT       7
+#define FILTER_WIDTH        7
+#define NR_FILTERS          64
+#define CONV_STRIDE         2
+#define CONV_DILATION       1
+#define IFMAP_HEIGHT        300
+#define IFMAP_WIDTH         300
+#define IFMAP_DIM_CH        3
+#define IFMAP_IS_XPADDED    0
+#define IFMAP_PAD_LEFT      2
+#define IFMAP_PAD_RIGHT     3
+#define IFMAP_PAD_TOP       2
+#define IFMAP_PAD_BOTTOM    3
+#define IFMAP_XSLICE_WIDTH  300
+#define OFMAP_DIM_CH        NR_FILTERS
+#define FILTERS_PARALLEL    16
+#define IFMAPS_PARALLEL     3
+#define ACT_FUNC            relu
+
+// Conv output config
+#define CONV_OFMAP_APPLY_XPAD 0
+#define CONV_OFMAP_PAD_TOP    0
+#define CONV_OFMAP_PAD_BOTTOM 0
+#define CONV_OFMAP_PAD_LEFT   0
+#define CONV_OFMAP_PAD_RIGHT  0
+#define CONV_OFMAP_HEIGHT     150
+#define CONV_OFMAP_WIDTH      150
+
+// Pooling config
+#define POOL_FUNC             maxpool
+#define POOL_KERNEL_SIZE      3
+#define POOL_STRIDE           2
+#define POOL_IFMAP_PAD_LEFT   0
+#define POOL_IFMAP_PAD_RIGHT  1
+#define POOL_IFMAP_PAD_TOP    0
+#define POOL_IFMAP_PAD_BOTTOM 1
+#define POOL_OFMAP_APPLY_XPAD 0
+#define POOL_OFMAP_PAD_LEFT   0
+#define POOL_OFMAP_PAD_RIGHT  0
+#define POOL_OFMAP_PAD_TOP    0
+#define POOL_OFMAP_PAD_BOTTOM 0
+#define POOL_OFMAP_HEIGHT     75
+#define POOL_OFMAP_WIDTH      75
+
+// DDR Addresses
+#define ADDR_FILTERS_DW     0
+#define LENGTH_FILTERS_DW   0
+#define ADDR_FILTERS        0
+#define LENGTH_FILTERS      9408
+#define ADDR_BIASES_DW      9408
+#define LENGTH_BIASES_DW    0
+#define ADDR_BIASES         9408
+#define LENGTH_BIASES       64
+#define ADDR_IFMAPS         9472
+#define LENGTH_IFMAPS       270000
+#define ADDR_RESIDUAL       279472
+#define LENGTH_RESIDUAL     0
+#define ADDR_OFMAPS_CONV    279472
+#define LENGTH_OFMAPS_CONV  1440000
+#define ADDR_OFMAPS_POOL    1719472
+#define LENGTH_OFMAPS_POOL  360000
